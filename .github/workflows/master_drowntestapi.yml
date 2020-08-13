@@ -31,4 +31,4 @@ jobs:
         app-name: 'drowntestapi'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_9f42a6cc8fcc46d782a7647cf40bab89 }}
-        package: './myapp.zip'
+       
