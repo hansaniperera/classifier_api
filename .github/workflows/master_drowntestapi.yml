@@ -24,13 +24,11 @@ jobs:
       run: |
         python -m venv env
         pip install -r requirements.txt
-    - name: Zip the application files
-      run: zip -r myapp.zip .
-
+   
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
       with:
         app-name: 'drowntestapi'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_55a47410c04c4aa19fecda672c5f132c }}
-        package: './myapp.zip'
+       
